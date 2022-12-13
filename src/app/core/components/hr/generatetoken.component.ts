@@ -8,6 +8,9 @@ import { HttpClient } from '@angular/common/http';
 export class GenerateTokenComponent {
   constructor(private http: HttpClient) {}
 
+  tokenRequestOutput: string =
+    'Type in email and then the generate token button to create a new registration token';
+
   generateNewToken() {
     const email: string = (<HTMLInputElement>(
       document.getElementById('inputEmail')
@@ -16,7 +19,10 @@ export class GenerateTokenComponent {
     this.http
       .get('http://localhost:8090/authentication-service/newtoken/' + email)
       .subscribe((response) => {
-        console.log(response);
+        this.tokenRequestOutput =
+          response['message'] +
+          ' || Registration Token: ' +
+          response['registrationToken'];
       });
   }
 }
