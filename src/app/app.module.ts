@@ -4,17 +4,12 @@ import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './core/components/navbar/navbar.component';
-import { LoginComponent } from './core/components/account/login.component';
-import { EmployeesComponent } from './core/components/hr/employees.component';
+import { HttpClientModule } from '@angular/common/http';
+import { AppRoutingModule } from './app.routing.module';
 
 @NgModule({
-  imports: [BrowserModule, FormsModule],
-  declarations: [
-    AppComponent,
-    NavbarComponent,
-    LoginComponent,
-    EmployeesComponent,
-  ],
+  imports: [BrowserModule, FormsModule, HttpClientModule, AppRoutingModule],
+  declarations: [AppComponent, NavbarComponent],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
