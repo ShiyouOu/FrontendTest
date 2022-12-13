@@ -14,7 +14,12 @@
         autofocus
       />
     </div>
-    <button class="btn btn-primary btn-block" type="submit">
+    <button
+      id="btn-generate-token"
+      class="btn btn-primary btn-block"
+      type="button"
+      (click)="generateNewToken()"
+    >
       GenerateToken
     </button>
   </form>
