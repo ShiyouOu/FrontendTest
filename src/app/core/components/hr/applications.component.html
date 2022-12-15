@@ -5,11 +5,18 @@
     <table class="table">
       <thead class="thead-dark">
         <tr>
-          <th>Name</th>
+          <th>Application Id</th>
           <th>Employee ID</th>
-          <th>Email Address</th>
-          <th>Phone</th>
-          <th>Active</th>
+          <th>Creation Date</th>
+          <th>Last Modification Date</th>
+          <th>Status</th>
+        </tr>
+        <tr *ngFor="let application of applications">
+          <td>{{ application.applicationId }}</td>
+          <td>{{ application.employeeId }}</td>
+          <td>{{ application.creationDate }}</td>
+          <td>{{ application.modificationDate }}</td>
+          <td>{{ application.status }}</td>
         </tr>
       </thead>
     </table>
