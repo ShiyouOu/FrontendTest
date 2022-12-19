@@ -20,7 +20,7 @@ import { AccountComponent } from './core/components/account/account.component';
       { path: 'login', component: LoginComponent },
       { path: 'employees', component: EmployeesComponent },
       { path: 'applications', component: ApplicationsComponent },
-      { path: '**', redirectTo: 'employees' },
+      { path: '**', redirectTo: 'login' },
     ]),
     CommonModule,
   ],
